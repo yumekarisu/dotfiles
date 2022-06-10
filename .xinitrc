@@ -1,6 +1,6 @@
-thunar --daemon &
+pcmanfm -d &
 nm-applet --indicator &
 dunst &
-playerctld &
+
 
 exec bspwm
