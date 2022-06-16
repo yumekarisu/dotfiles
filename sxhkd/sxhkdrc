@@ -2,14 +2,14 @@ suki#
 # wm independent hotkeys
 # terminal emulator
 control + alt + t
-	alacritty
+	kitty
 
 # program launcher
 super + d
-	dmenu_run -h 34
+	j4-dmenu-desktop --dmenu="dmenu -i -h 34"
 
 super + e
-	thunar
+	pcmanfm
 
 # make sxhkd reload its configuration files:
 super + r
@@ -17,7 +17,11 @@ super + r
 
 #screenshot
 super + shift + s
-	maim -u -s | xclip -selection clipboard -t image/png
+	maim -u -o -s | xclip -selection clipboard -t image/png
+
+#neovim
+super + n
+	kitty -e nvim
 
 # bspwm hotkeys
 # quit/restart bspwm
@@ -72,12 +76,8 @@ super + shift + 9
 super + shift + 0
 	bspc node -d 10
 
-#alt-tabbing (kinda)
-alt+tab
-     	bspc node -f last
-
-super + l
-    betterlockscreen -l
+super + i
+    betterlockscreen -l dimblur --blur 1.0 --dim 80 
 
 # set the window state
 super + {t,f,shift + f}
@@ -85,6 +85,9 @@ super + {t,f,shift + f}
 
 # move/resize
 #change focus and move a window
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
 super + shift + {h,j,k,l}
 	bspc node -s {west,south,north,east}
 
