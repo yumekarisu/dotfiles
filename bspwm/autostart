@@ -1,14 +1,11 @@
 #! /bin/sh
 #autostart
-#wallpaper
-nitrogen --restore &
 
-#fcitx
-fcitx5 &
+picom --experimental-backends &
+
+#wallpaper
+~/.fehbg &
 
 #set cursor
 xsetroot -cursor_name left_ptr &
-
-#autostart Apps
-
 
