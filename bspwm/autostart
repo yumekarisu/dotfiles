@@ -1,7 +1,9 @@
 #! /bin/sh
 #autostart
 
-picom --experimental-backends &
+#polybar
+killall -q polybar 
+polybar -r yumeka-bar &
 
 #wallpaper
 ~/.fehbg &
@@ -9,3 +11,9 @@ picom --experimental-backends &
 #set cursor
 xsetroot -cursor_name left_ptr &
 
+#open neovim at launch
+if pgrep -x nvim > /dev/null; then
+	echo "neovim is running"	
+else
+	alacritty -e nvim -c VimwikiIndex &
+fi

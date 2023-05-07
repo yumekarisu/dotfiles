@@ -4,13 +4,13 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 if [ "$(xrandr | grep "HDMI-1 connected")" ]
 then
-#	xrandr --output eDP-1 --left-of HDMI-1 --auto --output HDMI-1 --primary --auto
-        xrandr --output eDP-1 --off --output HDMI-1 --auto --primary
-                #bspc monitor eDP-1 -d 9
-		bspc monitor HDMI-1 -d 1 2 3 4 5 6 7 8 9
+	xrandr --output HDMI-1 --primary --auto --output eDP-1 --left-of HDMI-1 --auto
+        #xrandr --output eDP-1 --off --output HDMI-1 --auto --primary
+		bspc monitor HDMI-1 -d 1 2 3 4 5 6 7 8 9 10
+                bspc monitor eDP-1 -d 11
 else
 	xrandr --output eDP-1 --auto --output HDMI-1 --off
-		bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9
+		bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 10
 fi
 
 # Used to make polybar maintain proper workspaces per monitor when going from 2
@@ -38,17 +38,11 @@ bspc config split_ratio          0.52
 bspc config active_border_color "#E23182"
 bspc config focused_border_color "#E23182"
 
-#Set desktop 1 to floating
-exec $HOME/.config/bspwm/Floating_Desktop &
+#Set floating workspace
+exec $HOME/.config/bspwm/floating-workspace &
 
 #bspwm rule
-exec $HOME/.config/bspwm/bspwm_rule &
-
-killall -q polybar
-polybar -r yumeka-bar &
+exec $HOME/.config/bspwm/window-rule &
 
 #autostart
 exec $HOME/.config/bspwm/autostart &
-
-#betterlockscreen
-betterlockscreen -u "$HOME/Pictures/rice/98681511_p0.jpg" dimblur
