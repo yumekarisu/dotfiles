@@ -1,0 +1,33 @@
+{
+    "layer": "top",
+    "height": 34 ,
+    "spacing": 8 ,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio" ,"battery", "clock"],
+    "wlr/workspaces" : {
+        "on-click" : "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+   "battery": {
+        "format": "{capacity}%"
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+    },
+    "tray": {
+    "icon-size": 14,
+    "spacing": 10
+    }
+}
