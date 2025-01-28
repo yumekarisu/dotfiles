@@ -1,0 +1,7 @@
+[user]
+	email = alicevanaice@gmail.com
+	name = yumekarisu
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
