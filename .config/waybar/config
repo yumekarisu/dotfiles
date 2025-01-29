@@ -18,7 +18,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/submap",
-        "custom/weather",
         //"idle_inhibitor",
         //"mpd"
         "custom/spotify"
