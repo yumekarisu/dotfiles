@@ -1,17 +1,14 @@
 {
     "layer": "top",
-
     "position": "top",
-
+    "height" : 51,
     "margin-left": 10,
-    "margin-bottom": 0,
     "margin-right": 10,
 
     "spacing": 5, // Gaps between modules (4px)
 
     "modules-left": [
         "sway/workspaces",
-        "sway/submap",
         //"idle_inhibitor",
         //"mpd"
         "custom/spotify"

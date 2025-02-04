@@ -8,3 +8,4 @@ SAVEHIST=10000
 
 # This will set the default prompt to the walters theme
 prompt walters
+fastfetch
