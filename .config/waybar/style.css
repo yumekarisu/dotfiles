@@ -1,28 +1,17 @@
 * {
-   font-family: FontAwesome, "Noto Sans CJK Light";
-   font-size: 10;
-   color: #ffffff;
+    margin: 2px 0px;
+    padding: 0px 4px;
+    background-color: transparent;
 }
 
-window#waybar {
-   background: #191919;
-   opacity: 0.7;
-}
-
-.modules-left {
-    opacity: 1;
-}
-.modules-center {
-    opacity: 1;
-}
-.modules-right {
-    opacity: 1;
+.modules-left, .modules-center, .modules-right {
+    background-color: #000000;
+    color: #ffffff;
+    border: 3px solid white;
+    border-radius: 8px;
 }
 
 #workspaces button.active {
-    background: #b82d4e;
-    border: none;
-    border-radius: 0;
+    background-color: red;
+    margin: 0px;
 }
-
-
