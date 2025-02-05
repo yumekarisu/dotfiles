@@ -1,17 +1,5 @@
 * {
-    margin: 2px 0px;
-    padding: 0px 4px;
-    background-color: transparent;
-}
-
-.modules-left, .modules-center, .modules-right {
-    background-color: #000000;
-    color: #ffffff;
-    border: 3px solid white;
-    border-radius: 8px;
-}
-
-#workspaces button.focused {
-    background-color: red;
     margin: 0px;
+    padding: 0px;
+    background-color: transparent;
 }
