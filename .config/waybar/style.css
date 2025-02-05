@@ -1,10 +1,11 @@
 window#waybar {
-    margin: 0px;
+    margin:  0px;
     padding: 0px;
     background-color: transparent;
 }
 
 .modules-left, .modules-center, .modules-right {
+    margin-top: 8px;
     padding: 4px;
     border-radius: 8px;
     color: #f2f4f8;
