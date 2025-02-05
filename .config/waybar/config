@@ -5,6 +5,9 @@
 	],
     "modules-center": ["clock"],
     "modules-right": [
+    "network",
+    "backlight",
+    "wireplumber",
     "battery",
     "tray",
     ],
@@ -38,9 +41,19 @@
         "format": "󰥔  {:%H:%M}",
 	"format-alt" : "  {:%B %d}" 
     },
+    
+    "network": {
+	"format-wifi": "{icon}",
+	"format-ethernet": "{icon}",
+	"format-icons": "",
+    },
+
+    "backlight": {},
+
+    "wireplumber": {},
 
     "battery": {
-        "format": "{capacity}% {icon}",
+        "format": "{icon}   {capacity}%",
         "format-icons": ["", "", "", "", ""]
     },
 
