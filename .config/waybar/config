@@ -39,8 +39,7 @@
     },
 
     "clock": {
-        "format": "󰥔  {:%H:%M}",
-	"format-alt" : "  {:%B %d}" 
+        "format": "󰥔   {:%H:%M}",
     },
     
     "network": {
