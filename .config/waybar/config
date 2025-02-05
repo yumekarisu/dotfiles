@@ -5,11 +5,11 @@
     "margin-left": 10,
     "margin-right": 10,
 
-    "spacing": 5, // Gaps between modules (4px)
+    "spacing": 3, // Gaps between modules (4px)
 
     "modules-left": [
         "sway/workspaces",
-        //"idle_inhibitor",
+        "idle_inhibitor",
         //"mpd"
         "custom/spotify"
     ],
@@ -21,19 +21,11 @@
         "backlight",
         "wireplumber",
 	"battery",
-        "custom/screenshot_t",
         "tray",
         "custom/power"
     ],
 
-
     // Modules
-
-       "custom/screenshot_t":{
-        "format":" ",
-        "on-click": "~/.config/hypr/scripts/screenshot_full",
-        "on-click-right":"~/.config/hypr/scripts/screenshot_area"
-    },
 
     "battery": {
         "interval": 2,
@@ -55,7 +47,7 @@
     },
 
     "network": {
-        "format-wifi": "   {essid}",
+        "format-wifi": " ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format": "",
@@ -72,11 +64,11 @@
         "format": "{icon} {percent}%",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        //"format-icons": ["", ""],
         "format-icons": [" ", " "],
         "on-scroll-down": "brightnessctl s 5%-",
         "on-scroll-up": "brightnessctl s +5%"
     },
+
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -85,6 +77,7 @@
         },
         "tooltip": "true"
     },
+
     "custom/spotify": {
 	"exec": "~/.config/waybar/mediaplayer.py --player spotify",
 	"format": "{}   ",
@@ -102,6 +95,7 @@
             "spotify": "",
             "default": "🎜"
         },
+
         "escape": true,
         //"exec": "~/.config/waybar/mediaplayer.py" // Script in resources folder
         // "exec": "~/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
@@ -134,29 +128,6 @@
         "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
     },
 
-    "custom/title": {
-        "format": "{}",
-        "interval": 0,
-        "return-type": "json",
-        //"max-length": 35,
-        "tooltip": false
-    },
-
-    "custom/title#name": {
-        "format": "{}",
-        "interval": 0,
-        "return-type": "json",
-
-        "max-length": 35,
-        "exec": "$HOME/.scripts/title"
-    },
-
-    /*"custom/keyboard": {
-        "format": " {}",
-        "interval": 1,
-        "exec": "$HOME/.config/waybar/get_kbdlayout.sh"
-    },*/
-
     "sway/workspaces": {
         "all-outputs": true,
         "format": "{icon}",
@@ -175,6 +146,7 @@
         "sort-by-number": true,
         "active-only": false,
     },
+
     "wireplumber": {
         "on-click": "pavucontrol",
         "on-click-right": "amixer sset Master toggle 1>/dev/null",
@@ -191,9 +163,6 @@
             "headphone": " ",
             "hands-free": " ",
             "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
             "default": [" ", " ", " "]
         },
     },
