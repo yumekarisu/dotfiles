@@ -1,174 +1,51 @@
 {
     "layer": "top",
-    "position": "top",
-    "height" : 51,
-    "margin-left": 10,
-    "margin-right": 10,
-
-    "spacing": 3, // Gaps between modules (4px)
-
     "modules-left": [
-        "sway/workspaces",
-        "idle_inhibitor",
-        //"mpd"
-        "custom/spotify"
-    ],
-    "modules-center": [
-        "clock"
-    ],
+	"sway/workspaces"
+	],
+    "modules-center": ["clock"],
     "modules-right": [
-        "network",
-        "backlight",
-        "wireplumber",
-	"battery",
-        "tray",
-        "custom/power"
+    "battery",
+    "tray",
     ],
 
-    // Modules
-
-    "battery": {
-        "interval": 2,
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-
-    "network": {
-        "format-wifi": " ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format": "",
-        "format-disconnected": "",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "alacritty -e iwctl",
-        "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
-        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
-        "interval": 10
-    },
-
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": [" ", " "],
-        "on-scroll-down": "brightnessctl s 5%-",
-        "on-scroll-up": "brightnessctl s +5%"
-    },
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": "true"
-    },
-
-    "custom/spotify": {
-	"exec": "~/.config/waybar/mediaplayer.py --player spotify",
-	"format": "{}   ",
-	"return-type": "json",
-	"on-click": "playerctl play-pause",
-	"on-scroll-up": "playerctl next",
-	"on-scroll-down": "playerctl previous"
-    },
-
-    "custom/media": {
-        "format": "{0} {1}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-
-        "escape": true,
-        //"exec": "~/.config/waybar/mediaplayer.py" // Script in resources folder
-        // "exec": "~/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-
-    "custom/power": {
-        "format": " 󰐥 ",
-        "tooltip": false,
-        "on-click": "wlogout"
+    // Module configuration
+    "sway/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+	    "1" : "",
+	    "2" : "",
+	    "3" : "",
+	    "4" : "󰓇",
+	    "5" : "󰠮",
+	    "6" : "󰓓",
+	    "7" : "7",
+	    "8" : "8",
+	    "9" : "9"
+	},
+	"persistent-workspaces" : {
+	    "1" : [],
+	    "2" : [],
+	    "3" : [],
+	    "4" : [],
+	    "5" : [],
+	    "6" : []
+	},
+	"disable-scroll" : true
     },
 
     "clock": {
-        "format": "  {:%H:%M   %e %b}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "<b>{}</b>"
+        "format": "󰥔  {:%H:%M}",
+	"format-alt" : "  {:%B %d}" 
     },
 
-    "mpd": {
-        "max-length": 25,
-        "format": "<span foreground='#bb9af7'></span> {title}",
-        "format-paused": " {title}",
-        "format-stopped": "<span foreground='#bb9af7'></span>",
-        "format-disconnected": "",
-        "on-click": "mpc --quiet toggle",
-        "on-click-right": "mpc update; mpc ls | mpc add",
-        "on-click-middle": "alacritty -e ncmpcpp",
-        "on-scroll-up": "mpc --quiet prev",
-        "on-scroll-down": "mpc --quiet next",
-        "smooth-scrolling-threshold": 5,
-        "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
-    },
-
-    "sway/workspaces": {
-        "all-outputs": true,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "一",
-            "2": "二",
-            "3": "三",
-            "4": "四",
-            "5": "五",
-            "6": "六",
-            "7": "七",
-            "8": "八",
-            "9": "九",
-            "10": "十",
-        },
-        "sort-by-number": true,
-        "active-only": false,
-    },
-
-    "wireplumber": {
-        "on-click": "pavucontrol",
-        "on-click-right": "amixer sset Master toggle 1>/dev/null",
-        //on-click: "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        //on-scroll-down: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04+";
-        //on-scroll-up: "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 0.04-";
-        "format": "<span foreground='#fab387'>{icon}</span>  {volume}%",
-        "format-muted": " ",
-        "format-source": "",
-        "format-source-muted": "",
-        //"format-muted": "<span foreground='#fab387'> </span>",
-        //"format-icons": [ "<span foreground='#fab387'></span>" ]
-        "format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
-            "default": [" ", " ", " "]
-        },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
     },
 
     "tray": {
-        "icon-size": 15,
-        "spacing": 5
+	"icon-size": 21,
+	"spacing": 10
     }
 }
