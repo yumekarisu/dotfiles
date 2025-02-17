@@ -2,7 +2,7 @@
     "layer": "top",
     "spacing": 16,
     "modules-left": [
-	"sway/workspaces"
+	"niri/workspaces"
 	],
     "modules-center": ["clock"],
     "modules-right": [
@@ -14,7 +14,7 @@
     ],
 
     // Module configuration
-    "sway/workspaces": {
+    "niri/workspaces": {
 	"format": " {icon} ",
 	"format-icons": {
 	    "1" : "",
