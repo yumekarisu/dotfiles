@@ -14,7 +14,7 @@ input {
             layout "jp"
             options "japan:hztg_escape"
         }
-	repeat-delay 200
+	repeat-delay 600
 	repeat-rate 24
     }
 
