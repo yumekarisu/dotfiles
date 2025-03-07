@@ -6,32 +6,44 @@ window#waybar {
 
 .modules-left, .modules-center, .modules-right {
     margin-top: 8px;
-    padding: 4px;
     border-radius: 8px;
     color: #f2f4f8;
-    background-color: #393939;
 }
 
 .modules-left {
-    margin-left: 16px;
     padding: 0px;
-}
-
-.modules-center {
-    padding: 0px 16px;
+    margin-left: 16px;
 }
 
 .modules-right {
     margin-right: 16px;
-    padding: 0px 16px;
+    padding: 8px 16px; 
+    background-color: #262626;
 }
 #workspaces button {
     margin: 0px;
-    padding: 6px;
+    padding: 8px;
+    background-color: #262626;
 }
 
 #workspaces button.focused {
     margin: 0px;
-    padding: 6px;
+    padding: 8px;
     background-color: #ee5396;
+}
+
+#clock {
+    padding: 8px 16px;
+    background-color: #262626;
+    border-radius: 8px;
+}
+
+#window {
+    padding: 8px 16px;
+    background-color: #262626;
+    border-radius: 8px;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
 }
