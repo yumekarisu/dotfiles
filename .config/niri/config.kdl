@@ -162,19 +162,18 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // The wiki explains how to configure individual animations:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
-    // Uncomment to turn off all animations.
     // off
-
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
 }
+
+workspace "Terminal"
+workspace "Study"
+workspace "Socials"
+workspace "Gaming"
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
 window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
@@ -185,6 +184,33 @@ window-rule {
     match app-id="obsidian"
     open-maximized true
 }
+
+window-rule {
+    match app-id="cromite"
+    match app-id="Alacritty"
+    open-on-workspace "Terminal"
+}
+
+window-rule {
+    match app-id="obsidian"
+    match app-id="anki"
+    match app-id="mpv"
+    open-on-workspace "Study"
+}
+
+window-rule {
+    match app-id="discord"
+    match app-id="Spotify"
+    match app-id="mpv"
+    open-on-workspace "Socials"
+}
+
+window-rule {
+    match app-id="Steam"
+    open-on-workspace "Gaming"
+}
+
+window-rule
 
 // Open as floating by default.
 window-rule {
