@@ -28,7 +28,6 @@ input {
     }
 
     mouse {
-        natural-scroll
         accel-profile "flat"
         scroll-method "no-scroll"
     }
@@ -180,16 +179,17 @@ window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    match app-id="cromite"
+    match app-id="discord"
+    match app-id="steam"
+    match app-id="obsidian"
+    open-maximized true
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// Open as floating by default.
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match title="Picture in picture"
+    match title="iwctl"
     open-floating true
 }
 

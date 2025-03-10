@@ -41,7 +41,7 @@
 	"format-wifi": "   ",
 	"format-ethernet": " 󰈀 ",
 	"format-disconnected": " 󰅛 ",
-	"on-click": "alacritty -e iwctl",
+	"on-click": "alacritty --class "iwctl" -e iwctl",
 	"tooltip": true,
 	"tooltip-format-wifi": "{ifname} via {essid}",
 	"tooltip-format": "{ifname} via {gwaddr}",
