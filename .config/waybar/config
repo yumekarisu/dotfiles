@@ -4,10 +4,8 @@
     "modules-left": [
 	"niri/workspaces",
 	"clock",
-	],
-    "modules-center": [
 	"niri/window",
-    ],
+	],
     "modules-right": [
     "network",
     "backlight",

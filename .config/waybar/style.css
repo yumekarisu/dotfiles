@@ -40,7 +40,8 @@ window#waybar {
 
 #window {
     padding: 8px 16px;
-    background-color: #262626;
+    background-color: #f2f4f8;
+    color: #262626;
     border-radius: 8px;
 }
 
