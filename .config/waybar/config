@@ -1,10 +1,11 @@
 {
     "layer": "top",
-    "spacing": 16,
+    "spacing": 4,
     "modules-left": [
-	"sway/workspaces"
+	"niri/workspaces",
+	"clock",
+	"niri/window",
 	],
-    "modules-center": ["clock"],
     "modules-right": [
     "network",
     "backlight",
@@ -14,39 +15,31 @@
     ],
 
     // Module configuration
-    "sway/workspaces": {
+    "niri/workspaces": {
 	"format": " {icon} ",
 	"format-icons": {
-	    "1" : "",
-	    "2" : "",
-	    "3" : "󰠮",
-	    "4" : "󰓇",
-	    "5" : "",
-	    "6" : "󰓓",
-	    "7" : "7",
-	    "8" : "8",
-	    "9" : "9"
+	    "Terminal" : "",
+	    "Study" : "󰠮",
+	    "Socials" : "",
+	    "Gaming" : "󰓓",
 	},
-	"persistent-workspaces" : {
-	    "1" : [],
-	    "2" : [],
-	    "3" : [],
-	    "4" : [],
-	    "5" : [],
-	    "6" : []
-	},
+	"current-only" : true,
 	"disable-scroll" : true
     },
 
     "clock": {
-        "format": "󰥔   {:%H:%M}",
+        "format": "󰥔  {:%H:%M}",
+    },
+
+    "niri/window": {
+	"format": "{app_id}",
     },
     
     "network": {
-	"format-wifi": "  ",
+	"format-wifi": "   ",
 	"format-ethernet": " 󰈀 ",
 	"format-disconnected": " 󰅛 ",
-	"on-click": "alacritty -e iwctl",
+	"on-click": "alacritty --class 'iwctl' -e iwctl",
 	"tooltip": true,
 	"tooltip-format-wifi": "{ifname} via {essid}",
 	"tooltip-format": "{ifname} via {gwaddr}",
@@ -68,7 +61,7 @@
     },
 
     "battery": {
-        "format": "{icon}   {capacity}%",
+        "format": " {icon}   {capacity}% ",
         "format-icons": ["", "", "", "", ""]
     },
 
