@@ -1,0 +1,4 @@
+browser brave
+macro , open-in-browser
+macro v set browser "setsid -f mpv"; open-in-browser; set browser
+macro m set browser "setsid -f mpv --no-video"; open-in-browser; set browser
