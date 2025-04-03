@@ -11,7 +11,7 @@ input {
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
 
-            layout "jp"
+            layout "us"
             options "ctrl:nocaps"
         }
 	repeat-delay 600
@@ -186,6 +186,12 @@ window-rule {
     match app-id="obsidian"
     match app-id="anki"
     match app-id="mpv"
+    open-on-workspace "Study"
+}
+
+window-rule {
+    match title="Browse"
+    open-maximized true
     open-on-workspace "Study"
 }
 
