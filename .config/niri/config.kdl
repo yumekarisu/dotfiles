@@ -186,7 +186,7 @@ window-rule {
 }
 
 window-rule {
-    match title="Browse"
+    match title="^Browse"
     open-maximized true
     open-on-workspace "Study"
 }
@@ -200,6 +200,7 @@ window-rule {
 
 window-rule {
     match app-id="Steam"
+    match app-id="gamescope"
     open-on-workspace "Gaming"
 }
 
