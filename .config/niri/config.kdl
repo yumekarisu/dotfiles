@@ -8,7 +8,7 @@ input {
             // For more information, see xkeyboard-config(7).
 
             layout "us"
-            options "caps:ctrl_shifted_capslock"
+            options "caps:ctrl_shifted_capslock,altwin:swap_lalt_lwin"
         }
 	repeat-delay 600
 	repeat-rate 24
@@ -36,8 +36,8 @@ input {
     
     workspace-auto-back-and-forth
 
-    mod-key "Alt"
-    mod-key-nested "Super"
+    mod-key "Super"
+    mod-key-nested "Alt"
 }
 
 // Settings that influence how windows are positioned and sized.
