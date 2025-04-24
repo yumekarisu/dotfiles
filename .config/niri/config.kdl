@@ -169,6 +169,7 @@ window-rule {
     match app-id="discord"
     match app-id="steam"
     match app-id="obsidian"
+    match app-id="mpv"
     open-maximized true
 }
 
@@ -181,7 +182,6 @@ window-rule {
 window-rule {
     match app-id="obsidian"
     match app-id="anki"
-    match app-id="mpv"
     open-on-workspace "Study"
 }
 
