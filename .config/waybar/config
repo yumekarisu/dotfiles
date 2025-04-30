@@ -1,72 +1,40 @@
 {
     "layer": "top",
-    "spacing": 4,
-    "modules-left": [
-	"niri/workspaces",
-	"clock",
-	"niri/window",
-	],
-    "modules-right": [
-    "network",
-    "backlight",
-    "wireplumber",
-    "battery",
-    "tray",
-    ],
-
-    // Module configuration
-    "niri/workspaces": {
-	"format": " {icon} ",
+    "height": 40, 
+    "spacing": 8,
+    "reload_style_on_change": true,
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["tray", "battery", "clock"],
+    "hyprland/workspaces": {
+	"active-only": true,
+	"format": "{icon} {name}",
 	"format-icons": {
-	    "Terminal" : "",
-	    "Study" : "󰠮",
-	    "Socials" : "",
-	    "Gaming" : "󰓓",
-	},
-	"current-only" : true,
-	"disable-scroll" : true
+	    "Terminal": "",
+	    "Web": "",
+	    "Notes": "󰠮",
+	    "Anki": "󰗊",
+	    "IRC": "󰡰",
+	    "Gaming": "󰓓",
+	    "Discord": "",
+	}
     },
-
-    "clock": {
-        "format": "󰥔  {:%H:%M}",
+    "hyprland/window": {
+	"format": "{class}",
+	"rewrite": {
+	    "brave-browser": "Brave"
+	}
     },
-
-    "niri/window": {
-	"format": "{app_id}",
-    },
-    
-    "network": {
-	"format-wifi": "   ",
-	"format-ethernet": " 󰈀 ",
-	"format-disconnected": " 󰅛 ",
-	"on-click": "alacritty --class 'iwctl' -e iwctl",
-	"tooltip": true,
-	"tooltip-format-wifi": "{ifname} via {essid}",
-	"tooltip-format": "{ifname} via {gwaddr}",
-	"tooltip-format-disconnected": "Disconnected"
-    },
-
-    "backlight": {
-	"format": " {icon} ",
-	"format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-	"tooltip-format": "{percent}%"
-    },
-
-    "wireplumber": {
-	"format": " {icon} ",
-	"fotmat-muted": "",
-	"format-icons": ["", "", ""],
-	"max-volume": 100,
-	"tooltip-format": "{volume}%"
-    },
-
-    "battery": {
-        "format": " {icon}   {capacity}% ",
-        "format-icons": ["", "", "", "", ""]
-    },
-
     "tray": {
-	"icon-size": 21,
-	"spacing": 10
+	"icon-size": 18,
+	"spacing": 8
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+	"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "clock": {
+        "format": "{:%H:%M}"
     }
 }
+
