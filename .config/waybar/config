@@ -3,9 +3,9 @@
     "height": 40, 
     "spacing": 8,
     "reload_style_on_change": true,
-    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "battery", "clock"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "hyprland/submap"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "battery"],
     "hyprland/workspaces": {
 	"active-only": true,
 	"format": "{icon} {name}",
@@ -14,7 +14,7 @@
 	    "Web": "",
 	    "Notes": "󰠮",
 	    "Anki": "󰗊",
-	    "IRC": "󰡰",
+	    "Network": "󰡰",
 	    "Gaming": "󰓓",
 	    "Discord": "",
 	}
