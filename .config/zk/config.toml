@@ -1,0 +1,25 @@
+[notebook]
+dir = "~/Documents/yumeka-notes"
+
+[note]
+
+language = "en"
+default-title = "Untitled"
+filename = "{{id}}"
+extension = "md"
+
+# Template used to generate a note's content.
+# If not an absolute path, it is relative to .zk/templates/
+template = "default.md"
+
+# Configure random ID generation.
+id-charset = "hex"
+id-length = 8
+id-case = "lower"
+
+[format.markdown]
+link-format = "[[{{filename}}|{{title}}]]"
+hashtags = true
+
+[tool]
+editor = "nvim"
