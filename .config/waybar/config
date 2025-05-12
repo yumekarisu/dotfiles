@@ -1,40 +1,68 @@
 {
     "layer": "top",
-    "height": 40, 
-    "spacing": 8,
-    "reload_style_on_change": true,
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "hyprland/submap"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "battery"],
-    "hyprland/workspaces": {
-	"active-only": true,
-	"format": "{icon} {name}",
-	"format-icons": {
-	    "Terminal": "",
-	    "Web": "",
-	    "Notes": "󰠮",
-	    "Anki": "󰗊",
-	    "Network": "󰡰",
-	    "Gaming": "󰓓",
-	    "Discord": "",
+	"height": 40, 
+	"spacing": 8,
+	"reload_style_on_change": true,
+	"modules-left": ["hyprland/workspaces", "hyprland/window", "hyprland/submap"],
+	"modules-center": ["clock"],
+	"modules-right": ["tray", "network", "bluetooth", "pulseaudio", "battery"],
+	"hyprland/workspaces": {
+	    "active-only": true,
+	    "format": "{icon} {name}",
+	    "format-icons": {
+		"Terminal": "",
+		"Web": "",
+		"Notes": "󰠮",
+		"Anki": "󰗊",
+		"Network": "󰡰",
+		"Spotify": "󰓇",
+		"Discord": "",
+		"VN": "",
+		"Gaming": "󰓓",
+	    }
+	},
+	"hyprland/window": {
+	    "format": "{class}",
+	    "rewrite": {
+		"brave-browser": "Brave"
+	    }
+	},
+	"network": {
+	    "interface": "wlan0",
+	    "format": "󰖩",
+	    "format-wifi": "󰖩",
+	    "format-ethernet": "󰲝",
+	    "format-disconnected": "󰖪", //An empty format will hide the module.
+	    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+	    "tooltip-format-wifi": "{essid}",
+	    "tooltip-format-ethernet": "{ifname}",
+	    "tooltip-format-disconnected": "󰅛",
+	    "max-length": 50
+	},
+	"bluetooth": {
+	    "format": "󰂯",
+	    "format-disabled": "󰂲", // an empty format will hide the module
+	    "format-connected": "󰂯",
+	},
+	"tray": {
+	    "icon-size": 18,
+	    "spacing": 8
+	},
+	"pulseaudio": {
+	    "format": "{volume}% {icon}",
+	    "format-bluetooth": "{volume}% 󰂰",
+	    "format-muted": "",
+	    "format-icons": {
+		"speaker": ["", "", ""],
+		"headset": [""]
+	    }
+	},
+	"battery": {
+	    "format": "{capacity}% {icon}",
+	    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
+	"clock": {
+	    "format": "{:%H:%M}"
 	}
-    },
-    "hyprland/window": {
-	"format": "{class}",
-	"rewrite": {
-	    "brave-browser": "Brave"
-	}
-    },
-    "tray": {
-	"icon-size": 18,
-	"spacing": 8
-    },
-    "battery": {
-        "format": "{capacity}% {icon}",
-	"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
-    "clock": {
-        "format": "{:%H:%M}"
-    }
 }
 

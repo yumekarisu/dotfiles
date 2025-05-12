@@ -30,3 +30,11 @@ window#waybar {
     text-shadow: inherit;
     background: inherit;
 }
+
+#network {
+    padding: 0 4pt;
+}
+
+#bluetooth {
+    font-size: 12pt;
+}
