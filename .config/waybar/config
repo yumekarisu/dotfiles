@@ -16,7 +16,7 @@
 
     // Module configuration
     "niri/workspaces": {
-	"format": " {icon} ",
+	"format": " {icon}   {name} ",
 	"format-icons": {
 	    "Work/Study" : "󰖼",
 	    "Relax" : "󱕮",
