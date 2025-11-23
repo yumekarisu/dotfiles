@@ -4,42 +4,43 @@
     "modules-left": [
 	"niri/workspaces",
 	"clock",
-	"niri/window",
+	"niri/window"
 	],
+    "modules-center" : [
+	"custom/media"
+    ],
     "modules-right": [
     "network",
     "backlight",
     "wireplumber",
     "battery",
-    "tray",
+    "tray"
     ],
 
     // Module configuration
     "niri/workspaces": {
-	"format": " {icon} ",
+	"format": " {icon}   {name} ",
 	"format-icons": {
-	    "Terminal" : "",
-	    "Study" : "󰠮",
-	    "Socials" : "",
-	    "Gaming" : "󰓓",
+	    "Work/Study" : "󰖼",
+	    "Relax" : "󱕮"
 	},
 	"current-only" : true,
 	"disable-scroll" : true
     },
 
     "clock": {
-        "format": "󰥔  {:%H:%M}",
+        "format": "  {:%a, %d %b   󰥔  %H:%M}"
     },
 
     "niri/window": {
-	"format": "{app_id}",
+	"format": "{app_id}"
     },
     
     "network": {
 	"format-wifi": "   ",
 	"format-ethernet": " 󰈀 ",
 	"format-disconnected": " 󰅛 ",
-	"on-click": "alacritty --class 'iwctl' -e iwctl",
+	"on-click": "alacritty --class 'wifi' -e impala",
 	"tooltip": true,
 	"tooltip-format-wifi": "{ifname} via {essid}",
 	"tooltip-format": "{ifname} via {gwaddr}",
@@ -68,5 +69,16 @@
     "tray": {
 	"icon-size": 21,
 	"spacing": 10
-    }
+    },
+    "custom/media": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "format-icons": {
+        "Playing": " ",
+        "Paused": " "
+    },
+    "max-length":70,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click": "playerctl play-pause"
+}
 }

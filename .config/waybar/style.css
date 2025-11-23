@@ -15,6 +15,12 @@ window#waybar {
     margin-left: 16px;
 }
 
+.modules-center {
+    margin-right: 16px;
+    padding: 8px 16px; 
+    background-color: #262626;   
+}
+
 .modules-right {
     margin-right: 16px;
     padding: 8px 16px; 
