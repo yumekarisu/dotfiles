@@ -29,7 +29,7 @@
     },
 
     "clock": {
-        "format": "󰥔  {:%H:%M}"
+        "format": "  {:%a, %d %b   󰥔  %H:%M}"
     },
 
     "niri/window": {
