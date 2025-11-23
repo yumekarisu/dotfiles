@@ -4,14 +4,17 @@
     "modules-left": [
 	"niri/workspaces",
 	"clock",
-	"niri/window",
+	"niri/window"
 	],
+    "modules-center" : [
+	"custom/media"
+    ],
     "modules-right": [
     "network",
     "backlight",
     "wireplumber",
     "battery",
-    "tray",
+    "tray"
     ],
 
     // Module configuration
@@ -19,18 +22,18 @@
 	"format": " {icon}   {name} ",
 	"format-icons": {
 	    "Work/Study" : "󰖼",
-	    "Relax" : "󱕮",
+	    "Relax" : "󱕮"
 	},
 	"current-only" : true,
 	"disable-scroll" : true
     },
 
     "clock": {
-        "format": "󰥔  {:%H:%M}",
+        "format": "󰥔  {:%H:%M}"
     },
 
     "niri/window": {
-	"format": "{app_id}",
+	"format": "{app_id}"
     },
     
     "network": {
@@ -66,5 +69,16 @@
     "tray": {
 	"icon-size": 21,
 	"spacing": 10
-    }
+    },
+    "custom/media": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "format-icons": {
+        "Playing": " ",
+        "Paused": " "
+    },
+    "max-length":70,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click": "playerctl play-pause"
+}
 }
