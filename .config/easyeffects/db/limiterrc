@@ -1,0 +1,5 @@
+[soe][Limiter#0]
+attack=4
+lookahead=2
+oversampling=5
+release=4
