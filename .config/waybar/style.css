@@ -4,9 +4,14 @@ window#waybar {
     background-color: transparent;
 }
 
-.modules-left, .modules-center, .modules-right {
+.modules-left, .modules-right {
     margin-top: 8px;
     border-radius: 8px;
+    color: #f2f4f8;
+}
+
+.modules-center {
+    margin-top: 8px;
     color: #f2f4f8;
 }
 
@@ -15,7 +20,8 @@ window#waybar {
     margin-left: 16px;
 }
 
-.modules-center {
+#custom-media.Playing, #custom-media.Paused {
+    border-radius: 8px;
     margin-right: 16px;
     padding: 8px 16px; 
     background-color: #262626;   
@@ -51,6 +57,6 @@ window#waybar {
     border-radius: 8px;
 }
 
-window#waybar.empty #window {
+window#waybar.empty #window, #custom-media {
     background-color: transparent;
 }
