@@ -1,0 +1,72 @@
+{
+    "layer": "top",
+    "spacing": 4,
+    "modules-left": [
+	"niri/workspaces",
+	"clock",
+	"niri/window",
+	],
+    "modules-right": [
+    "network",
+    "backlight",
+    "wireplumber",
+    "battery",
+    "tray",
+    ],
+
+    // Module configuration
+    "niri/workspaces": {
+	"format": " {icon} ",
+	"format-icons": {
+	    "Terminal" : "",
+	    "Study" : "󰠮",
+	    "Socials" : "",
+	    "Gaming" : "󰓓",
+	},
+	"current-only" : true,
+	"disable-scroll" : true
+    },
+
+    "clock": {
+        "format": "󰥔  {:%H:%M}",
+    },
+
+    "niri/window": {
+	"format": "{app_id}",
+    },
+    
+    "network": {
+	"format-wifi": "   ",
+	"format-ethernet": " 󰈀 ",
+	"format-disconnected": " 󰅛 ",
+	"on-click": "alacritty --class 'iwctl' -e iwctl",
+	"tooltip": true,
+	"tooltip-format-wifi": "{ifname} via {essid}",
+	"tooltip-format": "{ifname} via {gwaddr}",
+	"tooltip-format-disconnected": "Disconnected"
+    },
+
+    "backlight": {
+	"format": " {icon} ",
+	"format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+	"tooltip-format": "{percent}%"
+    },
+
+    "wireplumber": {
+	"format": " {icon} ",
+	"fotmat-muted": "",
+	"format-icons": ["", "", ""],
+	"max-volume": 100,
+	"tooltip-format": "{volume}%"
+    },
+
+    "battery": {
+        "format": " {icon}   {capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "tray": {
+	"icon-size": 21,
+	"spacing": 10
+    }
+}
