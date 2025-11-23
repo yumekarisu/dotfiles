@@ -18,10 +18,8 @@
     "niri/workspaces": {
 	"format": " {icon} ",
 	"format-icons": {
-	    "Terminal" : "",
-	    "Study" : "󰠮",
-	    "Socials" : "",
-	    "Gaming" : "󰓓",
+	    "Work/Study" : "󰖼",
+	    "Relax" : "󱕮",
 	},
 	"current-only" : true,
 	"disable-scroll" : true
@@ -39,7 +37,7 @@
 	"format-wifi": "   ",
 	"format-ethernet": " 󰈀 ",
 	"format-disconnected": " 󰅛 ",
-	"on-click": "alacritty --class 'iwctl' -e iwctl",
+	"on-click": "alacritty --class 'wifi' -e impala",
 	"tooltip": true,
 	"tooltip-format-wifi": "{ifname} via {essid}",
 	"tooltip-format": "{ifname} via {gwaddr}",
