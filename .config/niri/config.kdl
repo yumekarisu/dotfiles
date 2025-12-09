@@ -10,6 +10,7 @@ input {
         natural-scroll
         accel-profile "flat"
         scroll-method "two-finger"
+	dwtp
     }
 
     mouse {
@@ -18,26 +19,13 @@ input {
 
     trackpoint {
         natural-scroll
+	accel-speed 0.75
         accel-profile "flat"
-        scroll-method "on-button-down"
-        scroll-button 273
+	scroll-method "on-button-down"
+	scroll-button 274
     }
     mod-key "Alt"
     mod-key-nested "Super"
-}
-
-output "eDP-1" {
-    mode "1920x1080"
-    scale 1
-    transform "normal"
-    position x=1920 y=0
-}
-
-output "Samsung Electric Company S24R35x H4TNB03294" {
-    mode "1920x1080@71.910"
-    scale 1
-    transform "normal"
-    position x=0 y=0
 }
 
 layout {
@@ -217,8 +205,12 @@ animations {
     // slowdown 3.0
 }
 
-workspace "Work/Study"
-workspace "Relax"
+workspace "Work/Study" {
+    open-on-output "Samsung Electric Company S24R35x H4TNB03294"
+}
+workspace "Relax" {
+    open-on-output "Samsung Electric Company S24R35x H4TNB03294"
+}
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
