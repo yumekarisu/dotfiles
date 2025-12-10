@@ -34,10 +34,11 @@ output "eDP-1" {
     position x=1921 y=0
 }
 
-output "HDMI-A-1" {
-    mode "1920x1080"
+output "Samsung Electric Company S24R35x H4TNB03294" {
+    mode "1920x1080@71.910"
     scale 1.0
     position x=0 y=0
+    variable-refresh-rate
 }
 
 layout {
