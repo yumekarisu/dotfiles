@@ -28,6 +28,18 @@ input {
     mod-key-nested "Super"
 }
 
+output "eDP-1" {
+    mode "1920x1080"
+    scale 1.0
+    position x=1921 y=0
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080"
+    scale 1.0
+    position x=0 y=0
+}
+
 layout {
     // Set gaps around windows in logical pixels.
     gaps 16
