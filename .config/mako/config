@@ -1,0 +1,12 @@
+sort=+time
+layer=overlay
+anchor=top-right
+on-button-left=dismiss
+on-button-right=invoke-default-action
+default-timeout=20000
+ignore-timeout=1
+text-color=#FFFFFF
+background-color=#262626
+border-color=#FFFFFF
+border-size=1
+icons=1
