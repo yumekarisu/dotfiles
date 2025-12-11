@@ -1,0 +1,9 @@
+screenshots
+clock
+timestr=%H:%m
+datestr=%a, %-m %b %Y
+indicator
+grace=15
+effect-greyscale
+effect-blur=2x2
+text-color=ffffff
