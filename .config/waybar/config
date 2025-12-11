@@ -22,7 +22,9 @@
 	"format": " {icon}   {name} ",
 	"format-icons": {
 	    "Work/Study" : "󰖼",
-	    "Relax" : "󱕮"
+	    "Relax" : "󱕮",
+	    "System" : "󱇯",
+	    "Game" : "󰊖"
 	},
 	"current-only" : true,
 	"disable-scroll" : true

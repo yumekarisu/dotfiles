@@ -102,10 +102,18 @@ animations {
 workspace "Work/Study" {
     open-on-output "Samsung Electric Company S24R35x H4TNB03294"
 }
+
 workspace "Relax" {
     open-on-output "Samsung Electric Company S24R35x H4TNB03294"
 }
 
+workspace "System" {
+    open-on-output "Samsung Electric Company S24R35x H4TNB03294"
+}
+
+workspace "Game" {
+    open-on-output "Samsung Electric Company S24R35x H4TNB03294"
+}
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
@@ -152,6 +160,19 @@ window-rule {
     match app-id="spotify"
     match app-id="discord"
     open-on-workspace "Relax"
+    default-column-width { proportion 0.75; }
+}
+
+window-rule {
+    match app-id="com.github.wwmm.easyeffects"
+    match app-id="org.qbittorrent.qBittorrent"
+    open-on-workspace "System"
+    default-column-width { proportion 0.75; }
+}
+
+window-rule {
+    match app-id=r#"^steam$"#
+    open-on-workspace "Game"
     default-column-width { proportion 0.75; }
 }
 
@@ -206,8 +227,8 @@ binds {
 
     Mod+1 { focus-workspace "Work/Study"; }
     Mod+2 { focus-workspace "Relax"; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
+    Mod+3 { focus-workspace "System"; }
+    Mod+4 { focus-workspace "Game"; }
     Mod+5 { focus-workspace 5; }
     Mod+6 { focus-workspace 6; }
     Mod+7 { focus-workspace 7; }
@@ -215,8 +236,8 @@ binds {
     Mod+9 { focus-workspace 9; }
     Mod+Shift+1 { move-column-to-workspace "Work/Study"; }
     Mod+Shift+2 { move-column-to-workspace "Relax"; }
-    Mod+Shift+3 { move-column-to-workspace 3; }
-    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+3 { move-column-to-workspace "System"; }
+    Mod+Shift+4 { move-column-to-workspace "Game"; }
     Mod+Shift+5 { move-column-to-workspace 5; }
     Mod+Shift+6 { move-column-to-workspace 6; }
     Mod+Shift+7 { move-column-to-workspace 7; }
